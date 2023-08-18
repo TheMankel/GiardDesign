@@ -1,12 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl-PL">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>GiardDesign</title>
     <link href="/dist/output.css" rel="stylesheet" />
+    <script src="/src/index.js" defer></script>
   </head>
   <body>
-    Hello world!
+    <header>
+      <div
+        class="relative flex items-center justify-between py-6 px-8 sm:px-16 lg:px-24 w-full bg-white z-50">
+        <div class="flex items-center h-6">
+          <a title="Logo" href="/">
+            <img src="/assets/icons/Logo.svg" alt="Giard Design Logo" />
+          </a>
+        </div>
+        <nav class="flex items-center">
+          <ul class="hidden lg:flex items-center gap-12">
+            <li class="relative group">
+              <a href="#" class="flex items-center gap-[5px]">
+                Oferta
+                <img
+                  class="group-hover:rotate-180 transition"
+                  src="/assets/icons/DropdownIcon.svg"
+                  alt="Offer Dropdown Icon" />
+              </a>
+              <ul
+                class="absolute mt-2 left-1/2 -translate-x-1/2 bg-white shadow-lg border-2 rounded border-green-pea scale-0 group-hover:scale-100 duration-300 origin-top">
+                <li class="block transition hover:bg-green-pea/20 px-4 py-2">
+                  <a title="Projekty" href="#projects">Projekty</a>
+                </li>
+                <li
+                  class="block transition hover:bg-green-pea/20 px-4 py-2 border-y-2 border-green-pea/40">
+                  <a title="Wizualizacje" href="#visualizations"
+                    >Wizualizacje</a
+                  >
+                </li>
+                <li class="block transition hover:bg-green-pea/20 px-4 py-2">
+                  <a title="Realizacje" href="#realizations">Realizacje</a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="relative after:bg-green-pea after:rounded-full after:absolute after:h-0.5 after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300">
+              <a title="About" href="#about">O firmie</a>
+            </li>
+            <li
+              class="relative after:bg-green-pea after:rounded-full after:absolute after:h-0.5 after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300">
+              <a title="Realizacje" href="#projects">Realizacje</a>
+            </li>
+            <li
+              class="relative after:bg-green-pea after:rounded-full after:absolute after:h-0.5 after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300">
+              <a title="Kontakt" href="#contact">Kontakt</a>
+            </li>
+            <li class="flex items-center group">
+              <div id="search-wrapper" class="hidden group-hover:block">
+                <input
+                  type="text"
+                  class="border rounded px-2 w-32 h-5 focus:outline-green-pea"
+                  placeholder="Szukaj..." />
+              </div>
+              <button id="search-button" class="focus:outline-none p-0.5">
+                <img
+                  src="/assets/icons/SearchIcon.svg"
+                  alt="Search Icon"
+                  class="w-5 h-5" />
+              </button>
+            </li>
+          </ul>
+          <div id="hamburger">
+            <div class="top-line"></div>
+            <div class="middle-line"></div>
+            <div class="bottom-line"></div>
+          </div>
+        </nav>
+      </div>
+      <div id="menu-overlay">
+        <div class="h-full flex items-center justify-center bg-white">
+          <ul class="flex flex-col items-center justify-center gap-4 py-4">
+            <li
+              class="hover:bg-green-pea/20 px-4 py-2 rounded text-center break-keep">
+              <a class="text-xl font-medium p-2" href="#offer">Oferta</a>
+            </li>
+            <li
+              class="hover:bg-green-pea/20 px-4 py-2 rounded text-center break-keep">
+              <a class="text-xl font-medium p-2" title="About" href="#about"
+                >O firmie</a
+              >
+            </li>
+            <li
+              class="hover:bg-green-pea/20 px-4 py-2 rounded text-center break-keep">
+              <a
+                class="text-xl font-medium p-2"
+                title="Realizacje"
+                href="#projects"
+                >Realizacje</a
+              >
+            </li>
+            <li
+              class="hover:bg-green-pea/20 px-4 py-2 rounded text-center break-keep">
+              <a class="text-xl font-medium p-2" title="Kontakt" href="#contact"
+                >Kontakt</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section
+        id="hero"
+        class="flex justify-between gap-12 xl:gap-16 w-full h-full bg-cameo">
+        <div class="relative w-full h-full my-auto">
+          <img
+            class="absolute top-0 left-0 w-full h-full bg-no-repeat bg-cover md:hidden opacity-25 z-0"
+            src="/assets/images/Hero.webp"
+            alt="Hero slider" />
+          <div
+            class="flex flex-col gap-8 xl:gap-[72px] px-5 py-9 md:pr-0 xl:pl-20 xl:py-36 xl:pr-0 relative z-10 w-full max-w-sm mx-auto md:max-w-none">
+            <div class="flex flex-col gap-11">
+              <h1 class="font-montserrat">
+                Nowoczesna aranżacja Twojego ogrodu
+              </h1>
+              <p>
+                Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+                realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
+                podejściem do każdego projektu.
+              </p>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-4 xl:gap-9">
+              <div class="flex item justify-center bg-green-pea rounded-full">
+                <a
+                  class="text-spring-wood text-base leading-normal px-5 xl:px-6 py-3"
+                  href="#contact"
+                  alt="Contact button">
+                  Skontaktuj się z nami
+                </a>
+              </div>
+              <div
+                class="flex items-center justify-center border border-green-pea rounded-full">
+                <a
+                  class="flex items-center gap-2 text-green-pea text-base leading-normal px-5 xl:px-6 py-3 fill-green-pea"
+                  href="#projects"
+                  alt="Projects button">
+                  Zobacz nasze realizacje
+                  <svg
+                    class="-rotate-90 w-4 h-4 fill-green-pea"
+                    width="27"
+                    height="24"
+                    viewBox="0 0 27 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0.795115 10.9393C0.209328 11.5251 0.209328 12.4749 0.795114 13.0607L10.3411 22.6066C10.9268 23.1924 11.8766 23.1924 12.4624 22.6066C13.0482 22.0208 13.0482 21.0711 12.4624 20.4853L3.97709 12L12.4624 3.51472C13.0482 2.92893 13.0482 1.97918 12.4624 1.3934C11.8766 0.80761 10.9268 0.80761 10.3411 1.3934L0.795115 10.9393ZM26.1442 10.5L1.85577 10.5L1.85577 13.5L26.1442 13.5L26.1442 10.5Z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden md:block w-full relative">
+          <img
+            class="w-full h-full"
+            src="/assets/images/Hero.webp"
+            alt="Hero slider" />
+          <div
+            id="slider-nav"
+            class="absolute bottom-0 flex gap-8 right-0 bg-spring-wood px-4 py-3 lg:px-8 lg:py-6 text-black">
+            <button
+              id="left-slider-arrow"
+              class="flex items-center justify-center w-12 h-12">
+              <img src="/assets/icons/ArrowIcon.svg" alt="Left slider arrow" />
+            </button>
+            <button
+              id="right-slider-arrow"
+              class="flex items-center justify-center w-12 h-12">
+              <img
+                class="rotate-180"
+                src="/assets/icons/ArrowIcon.svg"
+                alt="Right slider arrow" />
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
