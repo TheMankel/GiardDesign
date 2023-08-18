@@ -15,6 +15,14 @@ a {
   @apply text-sm leading-normal;
 }
 
+h1 {
+  @apply font-montserrat font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center md:text-left;
+}
+
+p {
+  @apply text-base leading-normal text-center md:text-left;
+}
+
 #hamburger {
   @apply relative w-6 h-5 block lg:hidden cursor-pointer;
 }
@@ -55,4 +63,8 @@ a {
 
 #menu-overlay.open {
   @apply w-full opacity-100;
+}
+
+.button-contain {
+  @apply w-full;
 }
