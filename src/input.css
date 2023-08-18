@@ -1,3 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply text-primary font-inter;
+}
+
+body.overlay {
+  @apply overflow-hidden;
+}
+
+a {
+  @apply text-sm leading-normal;
+}
+
+#hamburger {
+  @apply relative w-6 h-5 block lg:hidden cursor-pointer;
+}
+
+.top-line,
+.middle-line,
+.bottom-line {
+  @apply absolute w-6 h-[1.5px] bg-primary rounded-full ease-in-out duration-300 origin-left;
+}
+
+.top-line {
+  @apply top-[1px];
+}
+
+.middle-line {
+  @apply top-[9px];
+}
+
+.bottom-line {
+  @apply top-[18px];
+}
+
+#hamburger.open .top-line {
+  @apply rotate-45;
+}
+
+#hamburger.open .middle-line {
+  @apply w-0 opacity-0;
+}
+
+#hamburger.open .bottom-line {
+  @apply -rotate-45;
+}
+
+#menu-overlay {
+  @apply block lg:hidden fixed left-0 opacity-0 w-0 h-screen z-20 overflow-hidden ease-in-out duration-300;
+}
+
+#menu-overlay.open {
+  @apply w-full opacity-100;
+}
