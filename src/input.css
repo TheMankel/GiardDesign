@@ -50,7 +50,7 @@ a {
 }
 
 #menu-overlay {
-  @apply block lg:hidden fixed left-0 opacity-0 w-0 h-screen z-20 overflow-hidden ease-in-out duration-300;
+  @apply block lg:hidden fixed left-0 top-0 opacity-0 w-0 h-screen z-40 overflow-hidden ease-in-out duration-300;
 }
 
 #menu-overlay.open {
