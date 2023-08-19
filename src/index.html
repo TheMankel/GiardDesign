@@ -21,18 +21,26 @@
             <li class="relative group">
               <a href="#" class="flex items-center gap-[5px]">
                 Oferta
-                <img
+                <svg
                   class="group-hover:rotate-180 transition"
-                  src="/assets/icons/DropdownIcon.svg"
-                  alt="Offer Dropdown Icon" />
+                  width="8"
+                  height="5"
+                  viewBox="0 0 8 5"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.130175 0.81427C-0.0433916 0.640703 -0.0433916 0.359297 0.130175 0.18573C0.287962 0.0279427 0.534874 0.0135984 0.708866 0.142697L0.758714 0.18573L4 3.42681L7.24129 0.18573C7.39907 0.0279427 7.64599 0.0135984 7.81998 0.142697L7.86983 0.18573C8.02761 0.343518 8.04196 0.59043 7.91286 0.764422L7.86983 0.81427L4.31427 4.36983C4.15648 4.52761 3.90957 4.54196 3.73558 4.41286L3.68573 4.36983L0.130175 0.81427Z"
+                    fill="#111111" />
+                </svg>
               </a>
               <ul
-                class="absolute mt-2 left-1/2 -translate-x-1/2 bg-white shadow-lg border-2 rounded border-green-pea scale-0 group-hover:scale-100 duration-300 origin-top">
+                class="absolute mt-2 left-1/2 -translate-x-1/2 bg-white shadow-lg border py-1 rounded border-spring-wood scale-0 group-hover:scale-100 duration-300 origin-top">
                 <li class="block transition hover:bg-green-pea/20 px-4 py-2">
                   <a title="Projekty" href="#projects">Projekty</a>
                 </li>
-                <li
-                  class="block transition hover:bg-green-pea/20 px-4 py-2 border-y-2 border-green-pea/40">
+                <li class="block transition hover:bg-green-pea/20 px-4 py-2">
                   <a title="Wizualizacje" href="#visualizations"
                     >Wizualizacje</a
                   >
@@ -54,14 +62,16 @@
               class="relative after:bg-green-pea after:rounded-full after:absolute after:h-0.5 after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300">
               <a title="Kontakt" href="#contact">Kontakt</a>
             </li>
-            <li class="flex items-center group">
-              <div id="search-wrapper" class="hidden group-hover:block">
+            <li class="flex items-center gap-1 group">
+              <div id="search-wrapper">
                 <input
-                  type="text"
-                  class="border rounded px-2 w-32 h-5 focus:outline-green-pea"
+                  type="search"
+                  class="opacity-0 group-hover:opacity-100 border rounded-full px-0 group-hover:px-2 h-6 focus:outline-green-pea outline-offset-0 outline-none w-0 group-hover:w-32 transition-all"
                   placeholder="Szukaj..." />
               </div>
-              <button id="search-button" class="focus:outline-none p-0.5">
+              <button
+                id="search-button"
+                class="relative focus:outline-none p-0.5">
                 <img
                   src="/assets/icons/SearchIcon.svg"
                   alt="Search Icon"
@@ -111,12 +121,8 @@
     <main>
       <section
         id="hero"
-        class="flex justify-between gap-12 xl:gap-16 w-full h-full bg-cameo">
+        class="flex flex-col md:flex-row justify-between gap-12 xl:gap-16 w-full h-full bg-cameo">
         <div class="relative w-full h-full my-auto">
-          <img
-            class="absolute top-0 left-0 w-full h-full bg-no-repeat bg-cover md:hidden opacity-25 z-0"
-            src="/assets/images/Hero.webp"
-            alt="Hero slider" />
           <div
             class="flex flex-col gap-8 xl:gap-[72px] px-5 py-9 md:pr-0 xl:pl-20 xl:py-36 xl:pr-0 relative z-10 w-full max-w-sm mx-auto md:max-w-none">
             <div class="flex flex-col gap-11">
@@ -159,7 +165,7 @@
             </div>
           </div>
         </div>
-        <div class="hidden md:block w-full relative">
+        <div class="relative w-full h-full">
           <img
             class="w-full h-full"
             src="/assets/images/Hero.webp"

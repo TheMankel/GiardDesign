@@ -16,7 +16,7 @@ a {
 }
 
 h1 {
-  @apply font-montserrat font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center md:text-left;
+  @apply font-montserrat font-medium text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center md:text-left;
 }
 
 p {

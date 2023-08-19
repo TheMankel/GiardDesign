@@ -1,4 +1,26 @@
 {
+  "name": "giard-design",
+  "description": "Recruitment assignment for adRespect company",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheMankel/GiardDesign"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TailwindCSS",
+    "Swiper"
+  ],
+  "author": "Jakub Jankowski",
+  "license": "ISC",
+  "dependencies": {
+    "swiper": "^10.2.0"
+  },
   "devDependencies": {
     "tailwindcss": "^3.3.3"
   }
