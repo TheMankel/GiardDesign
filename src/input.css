@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply scroll-smooth;
+}
+
 body {
   @apply text-primary font-inter;
 }
@@ -15,8 +19,27 @@ a {
   @apply text-sm leading-normal;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  @apply font-montserrat font-medium text-center md:text-left;
+}
+
 h1 {
-  @apply font-montserrat font-medium text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center md:text-left;
+  @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+}
+
+h2 {
+  @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl xl:leading-[1.15];
+}
+
+h3 {
+  @apply text-lg md:text-xl lg:text-2xl xl:text-3xl-alt;
+}
+
+h4 {
+  @apply text-2xl md:text-3xl lg:text-4xl xl:text-4xl-alt;
 }
 
 p {
@@ -65,6 +88,30 @@ p {
   @apply w-full opacity-100;
 }
 
-.button-contain {
-  @apply w-full;
+.button-contained {
+  @apply bg-green-pea rounded-full flex items-center text-spring-wood text-base leading-normal px-5 xl:px-6 py-3 hover:bg-green-pea-600 hover:shadow-gen duration-300 fill-green-pea hover:fill-green-pea-600;
+}
+
+.button-contained.secondary {
+  @apply bg-spring-wood rounded-full flex items-center text-green-pea text-base leading-normal px-5 xl:px-6 py-[10px] hover:bg-spring-wood-200 hover:shadow-gen duration-300 fill-spring-wood hover:fill-spring-wood-200;
+}
+
+.button-outlined {
+  @apply border border-green-pea rounded-full flex items-center gap-2 text-green-pea text-base leading-normal px-5 xl:px-6 py-3 hover:border-green-pea-600 hover:text-green-pea-600 hover:bg-green-pea/5 hover:shadow-gen duration-300 fill-green-pea hover:fill-green-pea-600;
+}
+
+.button-outlined.secondary {
+  @apply border border-spring-wood rounded-full flex items-center gap-2 text-spring-wood text-base leading-normal px-5 xl:px-6 py-3 hover:border-spring-wood-200 hover:text-spring-wood-200 hover:bg-spring-wood/5 hover:shadow-gen duration-300 fill-spring-wood hover:fill-spring-wood-200;
+}
+
+.button-link {
+  @apply w-full flex items-center gap-2 text-green-pea text-base leading-normal border-b border-green-pea hover:border-green-pea-600 hover:text-green-pea-600 duration-300 fill-green-pea hover:fill-green-pea-600;
+}
+
+.underline-effect {
+  @apply relative after:bg-green-pea after:rounded-full after:absolute after:h-0.5 after:w-0 after:bottom-1 lg:after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300;
+}
+
+.card {
+  @apply flex flex-col justify-between items-center w-full lg:w-[378px] h-[370px] rounded-3xl bg-white px-6 py-10 md:px-10 md:py-12 hover:shadow-gen hover:-translate-y-2 duration-300;
 }
