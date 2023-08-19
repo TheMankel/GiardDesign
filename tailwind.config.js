@@ -53,52 +53,77 @@ module.exports = {
         inter: ['inter', 'sans-serif'],
         montserrat: ['montserrat', 'sans-serif'],
       },
-    },
-    backgroundImage: {
-      hero: 'url("/assets/images/Hero.webp")',
-    },
-    animation: {
-      'fade-in': 'fadeIn 300ms ease-in-out',
-      'fade-out': 'fadeOut 300ms ease-in-out',
-      'slide-in': 'slideIn 300ms ease-in-out',
-      'slide-out': 'slideOut 300ms ease-in-out',
-    },
-    keyframes: {
-      fadeIn: {
-        '0%': {
-          opacity: 0,
+      backgroundImage: {
+        hero: 'url("/assets/images/Hero.webp")',
+      },
+      animation: {
+        'fade-in': 'fadeIn 300ms ease-in-out',
+        'fade-out': 'fadeOut 300ms ease-in-out',
+        'slide-in': 'slideIn 300ms ease-in-out',
+        'slide-out': 'slideOut 300ms ease-in-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': {
+            opacity: 0,
+          },
+          '100%': {
+            opacity: 1,
+          },
         },
-        '100%': {
-          opacity: 1,
+        fadeOut: {
+          '0%': {
+            opacity: 1,
+          },
+          '100%': {
+            opacity: 0,
+          },
+        },
+        slideIn: {
+          '0%': {
+            opacity: 0,
+            width: 0,
+          },
+          '100%': {
+            opacity: 1,
+            width: '100%',
+          },
+        },
+        slideOut: {
+          '0%': {
+            opacity: 1,
+            width: '100%',
+          },
+          '100%': {
+            opacity: 0,
+            width: 0,
+          },
         },
       },
-      fadeOut: {
-        '0%': {
-          opacity: 1,
-        },
-        '100%': {
-          opacity: 0,
-        },
+      boxShadow: {
+        gen: '0px 8px 16px 0px rgba(0, 0, 0, 0.25)',
       },
-      slideIn: {
-        '0%': {
-          opacity: 0,
-          width: 0,
-        },
-        '100%': {
-          opacity: 1,
-          width: '100%',
-        },
+      borderRadius: {
+        '4xl': '28px',
       },
-      slideOut: {
-        '0%': {
-          opacity: 1,
-          width: '100%',
-        },
-        '100%': {
-          opacity: 0,
-          width: 0,
-        },
+      fontSize: {
+        '3xl-alt': [
+          '1.75rem',
+          {
+            lineHeight: '1.15rem',
+            letterSpacing: '-0.05em',
+          },
+        ],
+        '4xl-alt': [
+          '2.5rem',
+          {
+            lineHeight: '120%',
+            letterSpacing: '-2px',
+          },
+        ],
+      },
+      gap: {
+        18: '72px',
       },
     },
   },
