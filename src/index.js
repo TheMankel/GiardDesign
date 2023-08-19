@@ -12,6 +12,14 @@ function toggleMobileMenu() {
 
 hamburger.addEventListener('click', toggleMobileMenu);
 
+function handleMenuClick(event) {
+  if (event.target.tagName === 'A') {
+    toggleMobileMenu();
+  }
+}
+
+menu.addEventListener('click', handleMenuClick);
+
 function handleSlider(e) {
   const clickedElement = e.target;
 
