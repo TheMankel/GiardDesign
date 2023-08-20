@@ -19,6 +19,7 @@
   "author": "Jakub Jankowski",
   "license": "ISC",
   "dependencies": {
+    "macy": "^2.5.1",
     "swiper": "^10.2.0"
   },
   "devDependencies": {
