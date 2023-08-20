@@ -207,7 +207,7 @@
 
     <main>
       <section id="hero" class="relative">
-        <div class="swiper carousel">
+        <div id="carousel" class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div
@@ -534,7 +534,9 @@
         </div>
       </section>
 
-      <section id="projects" class="flex flex-col gap-24 bg-cameo pt-[120px]">
+      <section
+        id="projects"
+        class="flex flex-col gap-24 bg-cameo pt-[120px] relative h-full">
         <div
           class="flex flex-col items-center md:items-start gap-4 px-4 md:px-[160px]">
           <div class="text-xs text-green-pea">Realizacje</div>
@@ -581,13 +583,50 @@
               src="/assets/images/Gallery_9.webp"
               alt="Gallery image"
               class="cursor-pointer" />
+
+            <img
+              src="/assets/images/Gallery_1.webp"
+              alt="Gallery image"
+              class="cursor-pointer hidden" />
+            <img
+              src="/assets/images/Gallery_2.webp"
+              alt="Gallery image"
+              class="cursor-pointer hidden" />
+            <img
+              src="/assets/images/Gallery_3.webp"
+              alt="Gallery image"
+              class="cursor-pointer hidden" />
+            <img
+              src="/assets/images/Gallery_4.webp"
+              alt="Gallery image"
+              class="cursor-pointer hidden" />
+            <img
+              src="/assets/images/Gallery_5.webp"
+              alt="Gallery image"
+              class="cursor-pointer hidden" />
+            <img
+              src="/assets/images/Gallery_6.webp"
+              alt="Gallery image"
+              class="cursor-pointer hidden" />
+            <img
+              src="/assets/images/Gallery_7.webp"
+              alt="Gallery image"
+              class="cursor-pointer hidden" />
+            <img
+              src="/assets/images/Gallery_8.webp"
+              alt="Gallery image"
+              class="cursor-pointer hidden" />
+            <img
+              src="/assets/images/Gallery_9.webp"
+              alt="Gallery image"
+              class="cursor-pointer hidden" />
           </div>
           <div
             class="absolute bottom-[90px] left-0 right-0 flex items-center justify-center">
             <button id="expand" class="button-expand group z-20">
               <span>Rozwiń</span>
               <svg
-                class="w-4 h-4 group-hover:scale-110 transition-all duration-300"
+                class="w-4 h-4 group-hover:scale-110 transition-transform duration-300"
                 width="16"
                 height="17"
                 viewBox="0 0 16 17"
