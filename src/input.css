@@ -85,7 +85,7 @@ p {
 }
 
 #menu-overlay.open {
-  @apply w-full opacity-100;
+  @apply w-screen opacity-100;
 }
 
 .button-contained {
@@ -113,7 +113,7 @@ p {
 }
 
 .button-expand.open {
-  @apply bg-green-pea border-spring-wood text-spring-wood hover:bg-green-pea-600 hover:shadow-gen duration-300 fill-spring-wood hover:fill-spring-wood-200;
+  @apply bg-green-pea border border-spring-wood rounded-full flex items-center gap-2 text-spring-wood text-base leading-normal px-5 xl:px-[22px] pt-3 pb-[14px] hover:bg-green-pea-600 hover:shadow-gen duration-300 fill-spring-wood hover:fill-spring-wood-200;
 }
 
 .underline-effect {
