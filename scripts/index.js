@@ -163,14 +163,14 @@ class ImageGallery {
   }
 
   toggleModal(e) {
-    if (e.target.tagName === 'IMG') {
+    if (e.target.tagName === 'IMG' && !this.modal.classList.contains('open')) {
       this.modal.classList.add('open');
       document.body.classList.add('overlay');
 
       const indexToSlide = Array.from(this.images).indexOf(e.target);
 
       if (!this.slideshow) this.initializeSlideshow();
-      if (indexToSlide != -1) this.slideshow.slideTo(indexToSlide);
+      if (indexToSlide !== -1) this.slideshow.slideToLoop(indexToSlide);
     } else if (e.target === this.modal || e.target.closest('#modal-close')) {
       this.modal.classList.remove('open');
       document.body.classList.remove('overlay');
@@ -248,3 +248,8 @@ const macyInstance = new Macy({
   },
 });
 const imageGallery = new ImageGallery(gallery, expandBtn, modal, macyInstance);
+
+AOS.init({
+  once: false,
+  duration: 500,
+});
