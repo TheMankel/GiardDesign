@@ -839,16 +839,6 @@ video {
   border-radius: 9999px;
 }
 
-.rounded-b-lg{
-  border-bottom-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-}
-
-.rounded-t-lg{
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-}
-
 .border{
   border-width: 1px;
 }
@@ -997,8 +987,8 @@ video {
   padding-bottom: 2.25rem;
 }
 
-.pb-8{
-  padding-bottom: 2rem;
+.pb-16{
+  padding-bottom: 4rem;
 }
 
 .pt-\[120px\]{
@@ -1120,10 +1110,12 @@ video {
 }
 
 html{
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body{
+  overflow-x: hidden;
   font-family: inter, sans-serif;
   --tw-text-opacity: 1;
   color: rgb(17 17 17 / var(--tw-text-opacity));
@@ -1745,9 +1737,21 @@ p{
 .swiper-pagination{
   bottom: 0px !important;
   display: flex !important;
-  height: 2rem !important;
+  height: 4rem !important;
   align-items: center !important;
   justify-content: center !important;
+}
+
+@media (min-width: 768px){
+  .swiper-pagination{
+    height: 3rem !important;
+  }
+}
+
+@media (min-width: 1024px){
+  .swiper-pagination{
+    height: 2rem !important;
+  }
 }
 
 #modal{
@@ -1763,9 +1767,30 @@ p{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media (min-width: 768px){
+  #modal{
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
 @media (min-width: 1024px){
   #modal{
-    padding: 8rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (min-width: 1280px){
+  #modal{
+    padding-left: 12rem;
+    padding-right: 12rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 }
 
@@ -1924,6 +1949,16 @@ p{
     gap: 2rem;
   }
 
+  .md\:rounded-b-lg{
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .md\:rounded-t-lg{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+
   .md\:bg-auto{
     background-size: auto;
   }
@@ -1956,6 +1991,10 @@ p{
   .md\:py-24{
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+
+  .md\:pb-12{
+    padding-bottom: 3rem;
   }
 
   .md\:pl-0{
@@ -2044,6 +2083,10 @@ p{
   .lg\:py-6{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+  }
+
+  .lg\:pb-8{
+    padding-bottom: 2rem;
   }
 
   .lg\:pb-\[160px\]{
