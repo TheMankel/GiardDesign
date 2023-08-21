@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --swiper-theme-color: #1b5b31 !important;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply text-primary font-inter;
+}
+
+body.overlay {
+  @apply overflow-hidden;
+}
+
+a {
+  @apply text-sm leading-normal;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-montserrat font-medium text-center md:text-left;
+}
+
+h1 {
+  @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+}
+
+h2 {
+  @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl xl:leading-[1.15];
+}
+
+h3 {
+  @apply text-lg md:text-xl lg:text-2xl xl:text-3xl-alt;
+}
+
+h4 {
+  @apply text-2xl md:text-3xl lg:text-4xl xl:text-4xl-alt;
+}
+
+p {
+  @apply font-normal text-base leading-normal text-center md:text-left -tracking-[0.01em];
+}
+
+#hamburger {
+  @apply relative w-6 h-5 block lg:hidden cursor-pointer;
+}
+
+#modal-close {
+  @apply relative w-6 h-5 cursor-pointer;
+}
+
+.top-line,
+.middle-line,
+.bottom-line {
+  @apply absolute w-6 h-[1.5px] bg-primary rounded-full ease-in-out duration-300 origin-left;
+}
+
+.top-line {
+  @apply top-[1px];
+}
+
+.middle-line {
+  @apply top-[9px];
+}
+
+.bottom-line {
+  @apply top-[18px];
+}
+
+#hamburger.open .top-line,
+#modal-close .top-line {
+  @apply rotate-45;
+}
+
+#hamburger.open .middle-line,
+#modal-close .middle-line {
+  @apply w-0 opacity-0;
+}
+
+#hamburger.open .bottom-line,
+#modal-close .bottom-line {
+  @apply -rotate-45;
+}
+
+#menu-overlay {
+  @apply block lg:hidden fixed left-0 top-0 opacity-0 w-0 h-screen z-40 overflow-hidden ease-in-out duration-300;
+}
+
+#menu-overlay.open {
+  @apply w-screen opacity-100;
+}
+
+.button-contained {
+  @apply bg-green-pea rounded-full flex items-center text-spring-wood text-base leading-normal px-5 xl:px-6 py-3 hover:bg-green-pea-600 hover:shadow-gen duration-300 fill-green-pea hover:fill-green-pea-600;
+}
+
+.button-contained.secondary {
+  @apply bg-spring-wood rounded-full flex items-center text-green-pea text-base leading-normal px-5 xl:px-6 py-[10px] hover:bg-spring-wood-200 hover:shadow-gen duration-300 fill-spring-wood hover:fill-spring-wood-200;
+}
+
+.button-outlined {
+  @apply border border-green-pea rounded-full flex items-center gap-2 text-green-pea text-base leading-normal px-5 xl:px-6 py-3 hover:border-green-pea-600 hover:text-green-pea-600 hover:bg-green-pea/5 hover:shadow-gen duration-300 fill-green-pea hover:fill-green-pea-600;
+}
+
+.button-outlined.secondary {
+  @apply border border-spring-wood rounded-full flex items-center gap-2 text-spring-wood text-base leading-normal px-5 xl:px-6 py-3 hover:border-spring-wood-200 hover:text-spring-wood-200 hover:bg-spring-wood/5 hover:shadow-gen duration-300 fill-spring-wood hover:fill-spring-wood-200;
+}
+
+.button-link {
+  @apply w-full flex items-center gap-2 text-green-pea text-base leading-normal border-b border-green-pea hover:border-green-pea-600 hover:text-green-pea-600 duration-300 fill-green-pea hover:fill-green-pea-600;
+}
+
+.button-expand {
+  @apply border border-primary rounded-full flex items-center gap-2 text-primary text-base leading-normal px-5 xl:px-[22px] pt-3 pb-[14px] hover:border-primary/80 hover:text-primary/80 hover:bg-primary/5 hover:shadow-gen duration-300 fill-primary hover:fill-primary/80;
+}
+
+.button-expand.open {
+  @apply bg-green-pea border border-spring-wood rounded-full flex items-center gap-2 text-spring-wood text-base leading-normal px-5 xl:px-[22px] pt-3 pb-[14px] hover:bg-green-pea-600 hover:shadow-gen duration-300 fill-spring-wood hover:fill-spring-wood-200;
+}
+
+.underline-effect {
+  @apply relative after:bg-green-pea after:rounded-full after:absolute after:h-0.5 after:w-0 after:bottom-1 lg:after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300;
+}
+
+.card {
+  @apply flex flex-col justify-between items-center w-full lg:w-[378px] h-[370px] rounded-3xl bg-white px-6 py-10 md:px-10 md:py-12 hover:shadow-gen hover:-translate-y-2 duration-300;
+}
+
+#gallery {
+  @apply relative z-10 before:absolute before:bottom-0 before:w-full before:h-[1000px] before:bg-gradient-to-t before:from-cameo to-[#DCC1AB00] before:z-20 before:opacity-100 before:transition-all before:duration-1000 before:ease-in-out;
+}
+
+#gallery.open {
+  @apply before:opacity-0 before:h-0 before:transition-all before:duration-1000 before:ease-in-out transition-all duration-300;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply text-primary hover:text-green-pea duration-300 !important;
+}
+
+.swiper-pagination {
+  @apply flex items-center justify-center bottom-0 h-8 !important;
+}
+
+#modal {
+  @apply fixed top-0 bg-slate-200/50  w-screen h-screen opacity-0 lg:p-32 -z-50 transition-opacity ease-in-out duration-300;
+}
+
+#modal.open {
+  @apply flex flex-col opacity-100 z-[100];
+}
