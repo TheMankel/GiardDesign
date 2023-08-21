@@ -100,18 +100,6 @@ const carouselInstance = new Swiper('#carousel', {
   },
 });
 
-// const gallerySlideshowInstance = new Swiper('#slideshow', {
-//   autoplay: {
-//     delay: 5000,
-//   },
-//   loop: true,
-//   spaceBetween: 0,
-//   navigation: {
-//     nextEl: '#left-slider-arrow',
-//     prevEl: '#right-slider-arrow',
-//   },
-// });
-
 // const macyInstance = new Macy({
 //   container: '#gallery',
 //   mobileFirst: false,
@@ -153,11 +141,15 @@ const menu = document.getElementById('menu-overlay');
 const mobileMenu = new MobileMenu(hamburger, menu);
 
 class ImageGallery {
-  constructor(gallery, expandBtn, macyInstance) {
+  constructor(gallery, expandBtn, modal, macyInstance) {
     this.gallery = gallery;
     this.expandBtn = expandBtn;
+    this.modal = modal;
+    this.slideshow = null;
     this.images = this.gallery.querySelectorAll('img');
     this.expandBtn.addEventListener('click', this.handleExpandClick.bind(this));
+    this.gallery.addEventListener('click', this.toggleModal.bind(this));
+    this.modal.addEventListener('click', this.toggleModal.bind(this));
     this.macyInstance = macyInstance;
     this.targetImageIndices = {
       open: 15,
@@ -168,6 +160,36 @@ class ImageGallery {
       closed: 'Rozwiń',
     };
     this.svgIconClass = 'rotate-180';
+  }
+
+  toggleModal(e) {
+    if (e.target.tagName === 'IMG') {
+      this.modal.classList.remove('hidden');
+      document.body.classList.add('overlay');
+
+      if (!this.slideshow) {
+        this.initializeSlideshow();
+      }
+    } else if (e.target === this.modal) {
+      this.modal.classList.add('hidden');
+      document.body.classList.remove('overlay');
+    }
+  }
+
+  initializeSlideshow() {
+    this.slideshow = new Swiper('#slideshow', {
+      loop: true,
+      spaceBetween: 0,
+      effect: 'fade',
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
   }
 
   toggleGallery() {
@@ -208,6 +230,7 @@ class ImageGallery {
 
 const gallery = document.getElementById('gallery');
 const expandBtn = document.getElementById('expand');
+const modal = document.getElementById('modal');
 const macyInstance = new Macy({
   container: '#gallery',
   mobileFirst: false,
@@ -223,4 +246,4 @@ const macyInstance = new Macy({
     y: 43,
   },
 });
-const imageGallery = new ImageGallery(gallery, expandBtn, macyInstance);
+const imageGallery = new ImageGallery(gallery, expandBtn, modal, macyInstance);
