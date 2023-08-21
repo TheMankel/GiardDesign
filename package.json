@@ -20,6 +20,7 @@
   "author": "Jakub Jankowski",
   "license": "ISC",
   "dependencies": {
+    "aos": "^2.3.4",
     "macy": "^2.5.1",
     "swiper": "^10.2.0"
   },
