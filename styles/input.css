@@ -8,7 +8,7 @@
 }
 
 html {
-  @apply scroll-smooth overflow-x-hidden;
+  @apply scroll-smooth;
 }
 
 body {
@@ -51,11 +51,11 @@ p {
 }
 
 #hamburger {
-  @apply relative w-6 h-5 block lg:hidden cursor-pointer;
+  @apply relative w-6 h-5 block lg:hidden cursor-pointer select-none;
 }
 
 #modal-close {
-  @apply relative w-6 h-5 cursor-pointer;
+  @apply relative w-6 h-5 cursor-pointer select-none;
 }
 
 .top-line,
@@ -158,4 +158,22 @@ p {
 
 #modal.open {
   @apply flex flex-col opacity-100 z-[100];
+}
+
+@media (min-width: 1024px) {
+  ::-webkit-scrollbar {
+    @apply w-2 h-2 z-[999];
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-green-pea rounded-lg;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-green-pea-600;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-cameo;
+  }
 }

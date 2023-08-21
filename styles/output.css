@@ -1110,7 +1110,6 @@ video {
 }
 
 html{
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -1276,6 +1275,9 @@ p{
   height: 1.25rem;
   width: 1.5rem;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 @media (min-width: 1024px){
@@ -1289,6 +1291,9 @@ p{
   height: 1.25rem;
   width: 1.5rem;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .top-line,
@@ -1799,6 +1804,30 @@ p{
   display: flex;
   flex-direction: column;
   opacity: 1;
+}
+
+@media (min-width: 1024px) {
+  ::-webkit-scrollbar{
+    z-index: 999;
+    height: 0.5rem;
+    width: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    border-radius: 0.5rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(27 91 49 / var(--tw-bg-opacity));
+  }
+
+  ::-webkit-scrollbar-thumb:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgb(14 48 26 / var(--tw-bg-opacity));
+  }
+
+  ::-webkit-scrollbar-track{
+    --tw-bg-opacity: 1;
+    background-color: rgb(220 193 171 / var(--tw-bg-opacity));
+  }
 }
 
 .hover\:gap-1:hover{
